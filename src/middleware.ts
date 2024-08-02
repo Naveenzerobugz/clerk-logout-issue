@@ -1,5 +1,4 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
-import { url } from "inspector";
 
 
 const isPublicRoute = createRouteMatcher(['/sign-in(.*)', '/sign-up(.*)']);
@@ -11,6 +10,8 @@ export default clerkMiddleware((auth, req) => {
 
     return auth().redirectToSignIn();
   }
+  
+  // if (!isPub licRoute(req)) auth().protect();
 });
 
 export const config = {
