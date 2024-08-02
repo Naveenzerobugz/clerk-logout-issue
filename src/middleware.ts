@@ -10,8 +10,8 @@ export default clerkMiddleware((auth, req) => {
 
     return auth().redirectToSignIn();
   }
-  
-  // if (!isPub licRoute(req)) auth().protect();
+
+  // if (!isPublicRoute(req)) auth().protect();
 });
 
 export const config = {
